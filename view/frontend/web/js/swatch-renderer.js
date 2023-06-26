@@ -26,7 +26,7 @@ define([
             matrixType: 'type1',
 
             _init: function () {
-                this.enabled = !!window.productmatrix.enabled && !!this.options.jsonConfig.enableProductMattrix;
+                this.enabled = !!window.productmatrix.enabled && !!this.options.jsonConfig.enableProductMatrix;
 
                 var total = Object.keys(this.options.jsonConfig.attributes).length;
                 if (total>=2) {
