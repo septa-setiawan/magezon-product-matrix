@@ -1,0 +1,11 @@
+<?php
+$helper                          = $this->helper('\Magezon\ProductMatrix\Helper\Data');
+$settings['enabled']             = $helper->isEnabled() ? true : false;
+$settings['displayOldPrice']     = $helper->getConfig('general/display_old_price') ? true : false;
+$settings['displayAvailableQty'] = $helper->getConfig('general/display_available_qty') ? true : false;
+$settings['displayResetBtn']     = $helper->getConfig('general/display_reset_btn') ? true : false;
+$settings['displayViewmoreBtn']  = $helper->getConfig('general/display_view_more_btn') ? true : false;
+?>
+<script>
+	window.productmatrix = <?= json_encode($settings) ?>;
+</script>
