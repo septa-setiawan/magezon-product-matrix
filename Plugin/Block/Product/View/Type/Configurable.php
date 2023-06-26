@@ -132,7 +132,7 @@ class Configurable
 					$_row['id']        = (int)$product->getId();
 				}
 			}
-			$result['enableProductMattrix'] = $subject->getProduct()->hasData('enable_product_mattrix') ? !!$subject->getProduct()->getEnableProductMatrix() : true;
+			$result['enableProductMatrix'] = $subject->getProduct()->hasData('enable_product_matrix') ? (boolean) $subject->getProduct()->getEnableProductMatrix() : true;
 			$result = $this->jsonEncoder->encode($result);
 		}
 
